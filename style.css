@@ -27,10 +27,14 @@ hr {
   transition: 0.5s;
 }
 #socials img:hover {
-  filter: invert(50%);
+  filter: invert(25%);
 }
 #ko-fi {
   height: 65px;
+  transition: 0.5s;
+}
+#ko-fi:hover {
+  filter: brightness(25%);
 }
 #container {
   width: 300px;
@@ -43,6 +47,7 @@ hr {
   padding: 10px;
   border-radius: 15px;
   background-color: #0008;
+  animation: containerAnimation ease-out 1s forwards;
 }
 #desc {
   font-weight: 400;
@@ -54,4 +59,14 @@ hr {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+@keyframes containerAnimation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0%);
+  }
+  100% {
+    opacity: 1;
+  }
 }
